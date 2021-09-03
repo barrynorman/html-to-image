@@ -59,6 +59,8 @@ export function getBlobFromURL(
     return placeholder
   }
 
+  console.log("URL", url);
+  
   const deferred = window.fetch
     ? window
         .fetch(url, {mode: 'no-cors'})
