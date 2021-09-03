@@ -61,7 +61,7 @@ export function getBlobFromURL(
 
   const deferred = window.fetch
     ? window
-        .fetch(url)
+        .fetch(url, {mode: 'no-cors'})
         .then((res) =>
           res.blob().then((blob) => ({
             blob,
